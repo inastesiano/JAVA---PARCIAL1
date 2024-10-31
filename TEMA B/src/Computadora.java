@@ -28,12 +28,17 @@ public class Computadora {
         this.componentes = componentes;
     }
 
+
     public long getCodigoBarras() {
         return codigoBarras;
     }
 
     public void setCodigoBarras(long codigoBarras) {
         this.codigoBarras = codigoBarras;
+    }
+
+    public long getCodigoBarrasLength(){
+        return Long.toString(codigoBarras).length();
     }
 
     public double getPrecioTotal() {

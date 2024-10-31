@@ -27,27 +27,21 @@ public class GeneraPC {
         System.out.println("Ingrese modelo: ");
         computadora.setModelo(teclado.nextLine());
 
-        while (computadora.getCodigoBarras() < 7 || computadora.getCodigoBarras() > 15){
+        while (computadora.getCodigoBarrasLength() < 7 || computadora.getCodigoBarrasLength() > 15) {
             System.out.println("Ingrese codigo de barras: ");
             computadora.setCodigoBarras(teclado.nextLong());
         }
 
+        int numComponentes = 0;
+        while (numComponentes<5 || numComponentes>12) {
+            System.out.println("Indique la cantidad de componentes del PC:");
+            numComponentes = teclado.nextInt();
+        }
 
-        System.out.println(computadora.getCodigoBarras());
 
 
-//        computadora.setCodigoBarras(teclado.nextLong());
-//        validarCodigoBarras();
+
+
 
     }
-
-//    public static String validarCodigoBarras () {
-//        Scanner teclado = new Scanner(System.in);
-//        System.out.println("Ingrese codigo de barras: ");
-//        String codigoBarras = teclado.nextLine();
-//        if (codigoBarras.length() < 7 || codigoBarras.length() > 15) {
-//            validarCodigoBarras();
-//        }
-//        return codigoBarras;
-//    }
 }
